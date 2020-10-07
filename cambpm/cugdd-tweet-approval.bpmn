@@ -21,7 +21,7 @@
       <bpmn:incoming>Flow_18ui5fu</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_18ui5fu" sourceRef="Activity_0l3ezyk" targetRef="Event_021i0lh" />
-    <bpmn:businessRuleTask id="Activity_1cm30eg" name="Tweet prüfen" camunda:decisionRef="tweet-check">
+    <bpmn:businessRuleTask id="Activity_1cm30eg" name="Tweet prüfen" camunda:asyncAfter="true" camunda:resultVariable="tweetOk" camunda:decisionRef="tweet-check" camunda:mapDecisionResult="singleEntry">
       <bpmn:incoming>Flow_10v18eh</bpmn:incoming>
       <bpmn:outgoing>Flow_19lzx5v</bpmn:outgoing>
     </bpmn:businessRuleTask>
