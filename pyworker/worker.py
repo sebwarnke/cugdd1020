@@ -11,15 +11,15 @@ def publishTweet(tweet, twitter_api) :
 
 def beautifyTweet(tweet, twitter_api) :
     trends = twitter_api.GetTrendsCurrent()
-    tweet = tweet + ", #cugdd presents a twitter trend:" + trends[9].name
+    tweet = tweet + " | #cugdd presents a recent twitter trend: " + trends[9].name
     return tweet
 
 with openapi_client.ApiClient() as api_client:
 
-    twitter_api = twitter.Api(consumer_key='lRhS80iIXXQtm6LM03awjvrvk',
-                      consumer_secret='gabtxwW8lnSL9yQUNdzAfgBOgIMSRqh7MegQs79GlKVWF36qLS',
-                      access_token_key='220324559-jet1dkzhSOeDWdaclI48z5txJRFLCnLOK45qStvo',
-                      access_token_secret='B28Ze8VDucBdiE38aVQqTxOyPc7eHunxBVv7XgGim4say')
+    twitter_api = twitter.Api(consumer_key='OK4EUUFHjg64HgN90a3lmqZCt',
+                      consumer_secret='WLQO8RD2Y0KAYPN6ZqDTv3nORkfsRic4NI1SNGC2ZTO21kZJud',
+                      access_token_key='1314269466935599105-g0DtQ75IYXvVhfOUoRQrI8nw0MsTwg',
+                      access_token_secret='DrEWm236P5EBwB8AMffU8umgm32pkGVWQCafakhD6LV5Z')
 
     external_tasks_client = openapi_client.ExternalTaskApi(api_client)
     fetch_and_lock_body = {
